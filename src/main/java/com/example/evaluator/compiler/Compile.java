@@ -1,4 +1,4 @@
-package com.example.evaluator;
+package com.example.evaluator.compiler;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,21 +6,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Hello world!
- *
- */
-@SpringBootApplication
-public class App 
-{
-	/*@RequestMapping("/")
+@RestController
+public class Compile {
+	@RequestMapping("/compile")
     String home(@RequestParam("code") String code) {
 		StringBuffer output = new StringBuffer();
 		BufferedWriter writer = null;
@@ -62,9 +54,5 @@ public class App
 			}
 		}
         return output.toString();
-    }*/
-
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(App.class, args);
     }
 }
