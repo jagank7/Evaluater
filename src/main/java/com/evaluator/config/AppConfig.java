@@ -40,7 +40,6 @@ public class AppConfig {
 	
 	@Bean
 	public MongoClientWrapper getMongoClientWrapper(){
-		System.out.println("++++++++++++++++" + dbHost + dbPort + dbConnPool);
 		return new MongoClientWrapper(dbHost, dbPort, dbConnPool);
 	}
 	
